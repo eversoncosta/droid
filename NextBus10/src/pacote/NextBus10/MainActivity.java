@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 
-				Intent inten1 = new Intent(MainActivity.this,Tempo_chegada.class);
+				Intent inten1 = new Intent(MainActivity.this,Act_tempoChegada.class);
 				startActivity(inten1);
 			}
 		 });

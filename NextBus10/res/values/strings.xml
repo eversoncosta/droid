@@ -6,5 +6,6 @@
     <string name="ola_mundo">teste de versionamento ok</string>
     <string name="tempoChegada">Tempo de chegada</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_act_tempo_chegada">Act_tempoChegada</string>
 
 </resources>
