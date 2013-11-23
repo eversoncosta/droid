@@ -4,5 +4,7 @@
     <string name="app_name">NextBus10</string>
     <string name="action_settings">Settings</string>
     <string name="ola_mundo">teste de versionamento ok</string>
+    <string name="tempoChegada">Tempo de chegada</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>
