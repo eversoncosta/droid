@@ -8,19 +8,19 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class MainActivity extends Activity {
+public class Act_Principal extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.principal_activity);
+		setContentView(R.layout.act_principal);
 		Button butao  = (Button) findViewById(R.id.button1);
 		butao.setOnClickListener(new OnClickListener() {
 								
 			@Override
 			public void onClick(View v) {
 
-				Intent inten1 = new Intent(MainActivity.this,Act_tempoChegada.class);
+				Intent inten1 = new Intent(Act_Principal.this,TempoChegada2.class);
 				startActivity(inten1);
 			}
 		 });
