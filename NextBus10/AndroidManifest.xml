@@ -36,6 +36,7 @@
             android:name="pacote.NextBus10.TempoChegada2"
             android:label="@string/title_activity_tempo_chegada2" >
         </activity>
-    </application>
+    </application> 
 
+    
 </manifest>
