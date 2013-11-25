@@ -12,6 +12,7 @@ public class Gps implements LocationListener {
 	
 	 public Gps(Context c) {
 	        location = null;
+	        
 	        LocationManager locationManager = (LocationManager) c.getSystemService(c.LOCATION_SERVICE);
 	        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
 	    }
