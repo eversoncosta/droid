@@ -8,42 +8,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <RadioGroup
-        android:id="@+id/radioGroup1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" >
-    </RadioGroup>
-
-    <RadioButton
-        android:id="@+id/radio1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/radioGroup1"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="58dp"
-        android:text="RadioButton" />
-
-    <RadioButton
-        android:id="@+id/radio0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/radioGroup1"
-        android:layout_below="@+id/radio1"
-        android:layout_marginLeft="58dp"
-        android:checked="true"
-        android:text="RadioButton" />
-
-    <RadioButton
-        android:id="@+id/radio2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/radioGroup1"
-        android:layout_below="@+id/radio0"
-        android:layout_marginLeft="58dp"
-        android:text="RadioButton" />
-
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
@@ -53,5 +17,41 @@
         android:layout_marginBottom="32dp"
         android:onClick="@string/tempoChegada"
         android:text="@string/tempoChegada" />
+
+    <RadioButton
+        android:id="@+id/radio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioGroup1"
+        android:layout_centerVertical="true"
+        android:text="Jiboia Branca" />
+
+    <RadioButton
+        android:id="@+id/radio0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioGroup1"
+        android:layout_below="@+id/radio1"
+        android:checked="true"
+        android:text="Marituba" />
+
+    <RadioButton
+        android:id="@+id/radio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioGroup1"
+        android:layout_below="@+id/radio0"
+        android:text="Jardim Sideral" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/radio2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/radio1"
+        android:layout_marginLeft="24dp" >
+
+    </RadioGroup>
 
 </RelativeLayout>
