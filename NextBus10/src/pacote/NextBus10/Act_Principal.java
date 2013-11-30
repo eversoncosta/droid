@@ -66,6 +66,7 @@ public class Act_Principal extends Activity implements LocationListener  {
 				10, this);
 		
 		String endereco = "";
+		//ALTERAÇÂO MINIMA
 		
 		DefaultHttpClient httpClient = new DefaultHttpClient();    
         URI uri;    
