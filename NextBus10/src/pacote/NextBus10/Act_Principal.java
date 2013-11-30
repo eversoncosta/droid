@@ -4,6 +4,7 @@ import java.io.InputStream;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -13,6 +14,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.R.layout;
+import android.location.Address;
 import android.location.Criteria;
 import android.location.Geocoder;
 import android.location.Location;
@@ -73,7 +75,7 @@ public class Act_Principal extends Activity implements LocationListener  {
             HttpGet method = new HttpGet(uri);    
             HttpResponse response = httpClient.execute(method);    
             data = response.getEntity().getContent(); 
-            String teste = "";
+            
         } catch (Exception e) {    
             e.printStackTrace();    
         }    
@@ -91,13 +93,28 @@ public class Act_Principal extends Activity implements LocationListener  {
 	
 	public void MultiplicarRadioButton()
 	{
-		Geocoder coder = new Geocoder(this);
+		
 	}
 
 	@Override
 	public void onLocationChanged(Location location) {
 
 		 String str = "Latitude: "+location.getLatitude()+" \nLongitude: "+location.getLongitude();
+		 //Geocoder coder = new Geocoder(getApplicationContext());
+		 Geocoder coder = new Geocoder(this, Locale.getDefault());
+		 try
+		 {
+		 List<Address> addresses = null;
+		    //addresses = coder.getFromLocation(location.getLatitude(), location.getLongitude(),1);
+		 addresses = coder.getFromLocation(37.25942, -121.99837,1);
+		    String teste = "etdf";
+		    String outr = teste;
+		 }
+		 catch (Exception ex)
+		 {
+			 Toast.makeText(getBaseContext(), ex.toString(), Toast.LENGTH_LONG).show();
+		 }
+		    
 		Toast.makeText(getBaseContext(), str, Toast.LENGTH_LONG).show();
 		
 	}
