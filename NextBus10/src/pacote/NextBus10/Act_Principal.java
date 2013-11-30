@@ -6,9 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -74,7 +77,10 @@ public class Act_Principal extends Activity implements LocationListener  {
         try {    
             uri = new URI("http://10.0.2.2:8080/Next_Bus/WebGetOnibus?endereco="+endereco);    
             HttpGet method = new HttpGet(uri);    
-            HttpResponse response = httpClient.execute(method);    
+            HttpResponse response = httpClient.execute(method);
+            HttpEntity httpEntity = response.getEntity();
+            String output = EntityUtils.toString(httpEntity);
+            
             data = response.getEntity().getContent(); 
             
         } catch (Exception e) {    
